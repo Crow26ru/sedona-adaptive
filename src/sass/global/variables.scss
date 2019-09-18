@@ -1,7 +1,7 @@
 /* --- ШРИФТЫ --- */
 $font-pt-sans: "PT Sans", "Arial", sans-serif;
 
-/* --- Цвета --- */
+/* --- ЦВЕТА --- */
 $color-light-blue: #81b3d2;
 $color-blue: #669ec0;
 $color-darl-blue: #5496bd;
@@ -16,3 +16,9 @@ $color-white-03: transparentize($color-white, 0.3);
 $color-black-03: transparentize($color-black, 0.3);
 $color-gray-03: transparentize($color-gray, 0.3);
 
+/* --- ТОЧКИ ПЕРЕХОДА --- */
+$mobile-min: 320px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1199px;
+$desktop: 1200px;
