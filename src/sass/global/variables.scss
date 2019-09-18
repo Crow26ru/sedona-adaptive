@@ -1,1 +1,18 @@
+/* --- ШРИФТЫ --- */
 $font-pt-sans: "PT Sans", "Arial", sans-serif;
+
+/* --- Цвета --- */
+$color-light-blue: #81b3d2;
+$color-blue: #669ec0;
+$color-darl-blue: #5496bd;
+$color-gray: #766357;
+$color-dark-gray: #604e43;
+$color-light-brown: #eeeeee;
+$color-sublight-brown: #e5e5e5;
+$color-dark-brown: #333333;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-white-03: transparentize($color-white, 0.3);
+$color-black-03: transparentize($color-black, 0.3);
+$color-gray-03: transparentize($color-gray, 0.3);
+
