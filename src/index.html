@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная | Седона</title>
+  <link rel="preload" href="fonts/PTSans-Regular.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="preload" href="fonts/PTSans-Bold.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header block">
+    <div class="block__inner header__inner">
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <a class="header__logo logo">
+          <picture class="logo__img">
+            <source media="(min-width: 1200px)" srcset="img/logo.svg">
+            <img src="img/logo-mobile.svg" width="110" height="223" alt="Логотип городка Седоны">
+          </picture>
+        </a>
+        <button class="btn btn--nav-close" type="button" aria-label="Закрыть навигационное меню"></button>
+        <button class="btn btn--nav-open" type="button" aria-label="Открыть навигационное меню"></button>
+      </nav>
+    </div>
+  </header>
+  <main class="block">
+    <h1 class="visually-hidden">Седона</h1>
+    <div class="intro">
+      <div class="block__inner">
+        <img src="img/index-intro-text.svg" alt="Добро пожаловать в Седону" class="intro__img" width="282" height="214">
+      </div>
+    </div>
+    <section class="features">
+      <h2 class="visually-hidden">Особенности городка</h2>
+      <p><strong>Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!</strong></p>
+      <p>Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем гранд каньон!</p>
+      <ul class="features__list">
+        <li class="features__item features__item--big">
+          <div class="features__text-block">
+            <p><em>Настоящий городок</em></p>
+            <p>&mdash;&nbsp;&#8470;&nbsp;1&nbsp;&mdash;</p>
+            <p>Седона не&nbsp;аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <picture class="features__img">
+            <source media="(min-width: 1200px)" srcset="img/photo-city-desktop@1x.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+            <img src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@2x.jpg 2x" width="320" height="260"  alt="Фотография местных домов в Седоне, которые выглядят в духе америконской эпохи дикого запада">
+          </picture>
+          <ul class="features__sublist">
+            <li>
+              <p><em>Жилье</em></p>
+              <p>Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!</p>
+            </li>
+            <li>
+              <p><em>Сувениры</em></p>
+              <p>Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
+            </li>
+            <li>
+              <p><em>Еда</em></p>
+              <p>Всегда заказывайте фирменный бургер, Вы&nbsp;не&nbsp;разочаруетесь!</p>
+            </li>
+          </ul>
+        </li>
+        <li class="features__item">
+          <div class="features__text-block">
+            <p><em>Там есть мост дьявола</em></p>
+            <p>&mdash;&nbsp;&#8470;&nbsp;2&nbsp;&mdash;</p>
+            <p>Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, конечно</p>
+          </div>
+          <picture class="features__img">
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+            <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фотография моста дьявола в Седоне по среди ущелья. Незабываемый вид.">
+          </picture>
+        </li>
+        <li class="features__item features__item--big">
+          <div class="features__text-block">
+            <p><em>Небольшая площадь</em></p>
+            <p>&mdash;&nbsp;&#8470;&nbsp;3&nbsp;&mdash;</p>
+            <p>Все интересные места находятся очень близко</p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__text-block">
+            <p><em>Красивая дорога</em></p>
+            <p>&mdash;&nbsp;&#8470;&nbsp;4&nbsp;&mdash;</p>
+            <p>Ехать из Лас-Вегаса совсем не скучно!</p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__text-block">
+            <p><em>Мало туристов</em></p>
+            <p>&mdash;&nbsp;&#8470;&nbsp;5&nbsp;&mdash;</p>
+            <p>Большинство туристов едет в Гранд каньон и толпится там</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="find-hotel">
+      <h2 class="visually-hidden">Подбор гостиницы</h2>
+      <p><em>Заинтересовались?</em></p>
+      <p>Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Cедоне</p>
+      <a href="#" class="find-hotel__btn">Найти гостиницу</a>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden">Карта</h2>
+      <picture class="map__img">
+        <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+        <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="350" alt="США, штат Аризона, город Седона">
+      </picture>
+    </section>
+  </main>
+  <footer class="footer block">
+    <div class="block__inner">
+      <div class="footer__top">
+        <p>#visitsedona</p>
+      </div>
+      <div class="footer__mid">
+        <ul class="footer__social social">
+          <li>
+            <a href="#" aria-label="Мы в Твиттере">
+              <svg class="social__icon social__icon--tw">
+                <use xlink:href="#"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Мы в Фейсбуке">
+              <svg class="social__icon social__icon--fb">
+                <use xlink:href="#"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Наш канал на Ютубе">
+              <svg class="social__icon social__icon--yt">
+                <use xlink:href="#"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <p>Разработано</p>
+        <a href="#">
+          <svg>
+            <use xlink:link="#"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
