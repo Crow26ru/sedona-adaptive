@@ -4,11 +4,15 @@ $font-pt-sans: "PT Sans", "Arial", sans-serif;
 /* --- ЦВЕТА --- */
 $color-light-blue: #81b3d2;
 $color-blue: #669ec0;
-$color-darl-blue: #5496bd;
+$color-dark-blue: #5496bd;
+$color-border-light-blue: #9ac2db;
+$color-border-blue: #77acca;
+$color-border-dark-blue: #678fa8;
 $color-gray: #766357;
 $color-dark-gray: #604e43;
 $color-light-brown: #eeeeee;
 $color-sublight-brown: #e5e5e5;
+$color-brown: #cccccc;
 $color-dark-brown: #333333;
 $color-white: #ffffff;
 $color-black: #000000;
@@ -22,3 +26,7 @@ $mobile-max: 767px;
 $tablet-min: 768px;
 $tablet-max: 1199px;
 $desktop: 1200px;
+
+/* --- РЕТИНА --- */
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

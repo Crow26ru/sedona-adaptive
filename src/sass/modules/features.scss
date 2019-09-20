@@ -1,0 +1,151 @@
+.features {
+  padding-top: 40px;
+}
+
+.features__inner {
+  & > p {
+    margin: 0 auto;
+    padding: 0 20px;
+
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  & > p:first-of-type {
+    margin-bottom: 40px;
+  }
+
+  & > p > strong {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  @include only-mobile {
+    & > p {
+      max-width: 450px;
+    }
+  }
+}
+
+.features__list {
+  @include list-reset;
+
+  background-color: $color-light-brown;
+}
+
+.features__item {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+
+  & p {
+    margin: 0;
+  }
+
+  & p:first-child {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  @include only-mobile {
+    &:first-child {
+      position: relative;
+
+      padding-top: 36px;
+    }
+
+    &:first-child::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 37px;
+
+      background: transparent url("../img/triangle-xl.svg") no-repeat center top;
+      background-size: 766px 37px;
+    }
+  }
+
+  &--big {
+    margin-left: 0;
+    margin-right: 0;
+
+    background-color: $color-light-blue;
+
+    color: $color-white;
+  }
+}
+
+.features__sublist {
+  @include list-reset;
+  background-color: $color-white;
+
+  text-align: left;
+  color: $color-dark-brown;
+
+  & li {
+    position: relative;
+
+    padding-left: 70px;
+    padding-right: 20px;
+  }
+
+  & li::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  & .features__hotel::after {
+    width: 39px;
+    height: 37px;
+
+    background: transparent url("../img/house-icon.svg") no-repeat 0 0;
+    background-size: 39px 37px;
+  }
+
+  & .features__gift::after {
+    width: 32px;
+    height: 38px;
+
+    background: transparent url("../img/gift-icon.svg") no-repeat 0 0;
+    background-size: 32px 38px;
+  }
+
+  & .features__eat::after {
+    width: 40px;
+    height: 35px;
+
+    background: transparent url("../img/hamburger-icon.svg") no-repeat 0 0;
+    background-size: 40px 35px;
+  }
+
+  & p:first-child {
+    margin: 0;
+
+    color: $color-black;
+  }
+
+  & p:first-child > em {
+    font-style: inherit;
+  }
+}
+
+.features__text-block > p > em {
+  font-style: inherit;
+}

@@ -22,6 +22,12 @@
   }
 }
 
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
 @mixin flex {
   display: flex;
   flex-grow: 0;

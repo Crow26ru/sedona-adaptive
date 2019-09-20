@@ -8,7 +8,17 @@ body {
   font-family: $font-pt-sans;
 }
 
+img,
+picture {
+  display: block;
+}
+
 img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+svg {
+  color: currentColor;
 }

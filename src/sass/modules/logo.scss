@@ -1,0 +1,17 @@
+.logo {
+  position: absolute;
+  bottom: -27px;
+  left: 50%;
+  z-index: 1;
+
+  display: block;
+  width: 102px;
+  height: 83px;
+
+  transform: translate(-50%, 0);
+
+  & img {
+    width: 102px;
+    height: 83px;
+  }
+}

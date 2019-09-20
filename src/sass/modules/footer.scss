@@ -1,0 +1,29 @@
+.footer {
+  padding-bottom: 20px;
+}
+
+.footer__top p {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+.footer__bottom a {
+  @include flex;
+  align-content: flex-start;
+  justify-content: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+.footer__bottom span {
+  margin-top: 5px;
+  margin-right: 12px;
+}
