@@ -2,7 +2,7 @@
   position: relative;
 
   @include only-mobile {
-    padding-bottom: 56px;
+    padding-bottom: 57px;
   }
 }
 
@@ -21,7 +21,7 @@
     display: block;
     border-top: 1px solid $color-border-light-blue;
     border-bottom: 1px solid $color-border-dark-blue;
-    padding: 8px 0;
+    padding: 7px 0;
 
     text-align: center;
     text-decoration: none;

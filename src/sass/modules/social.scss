@@ -17,6 +17,13 @@
   }
 }
 
+.social a,
+.social a:hover,
+.social a:focus,
+.social a:active {
+  transition: color 0.4s, background-color 0.4s;
+}
+
 .social a {
   position: relative;
 
@@ -27,6 +34,17 @@
   color: $color-white;
 
   background-color: $color-light-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $color-blue;
+  }
+
+  &:active {
+    background-color: $color-dark-blue;
+
+    color: $color-white-03;
+  }
 }
 
 .social__icon {

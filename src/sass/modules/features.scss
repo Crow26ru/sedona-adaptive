@@ -1,5 +1,5 @@
 .features {
-  padding-top: 40px;
+  padding-top: 41px;
 }
 
 .features__inner {
@@ -14,12 +14,16 @@
   }
 
   & > p:first-of-type {
-    margin-bottom: 40px;
+    margin-bottom: 26px;
+  }
+
+  & > p:last-of-type {
+    margin-bottom: 5px;
   }
 
   & > p > strong {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 23px;
     font-weight: 700;
     color: $color-black;
   }
@@ -47,13 +51,17 @@
   text-align: center;
   text-transform: uppercase;
 
+  &:last-child .features__text-block {
+    border-bottom: none;
+  }
+
   & p {
     margin: 0;
   }
 
   & p:first-child {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 24px;
     font-weight: 700;
   }
 
@@ -72,6 +80,7 @@
       left: 0;
 
       width: 100%;
+      max-width: 100%;
       height: 37px;
 
       background: transparent url("../img/triangle-xl.svg") no-repeat center top;
@@ -87,10 +96,19 @@
 
     color: $color-white;
   }
+
+  &--big .features__text-block {
+    border: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .features__sublist {
   @include list-reset;
+  padding-top: 35px;
+  padding-bottom: 9px;
+
   background-color: $color-white;
 
   text-align: left;
@@ -99,8 +117,10 @@
   & li {
     position: relative;
 
+    margin: 0 auto 29px;
     padding-left: 70px;
     padding-right: 20px;
+    max-width: 400px;
   }
 
   & li::after {
@@ -111,7 +131,18 @@
     left: 0;
   }
 
+  & p {
+    max-width: 400px;
+  }
+
+  & p:first-child {
+    margin-bottom: 15px;
+  }
+
   & .features__hotel::after {
+    top: -9px;
+    left: 21px;
+
     width: 39px;
     height: 37px;
 
@@ -120,6 +151,9 @@
   }
 
   & .features__gift::after {
+    top: -11px;
+    left: 25px;
+
     width: 32px;
     height: 38px;
 
@@ -128,6 +162,9 @@
   }
 
   & .features__eat::after {
+    top: -5px;
+    left: 18px;
+
     width: 40px;
     height: 35px;
 
@@ -135,9 +172,11 @@
     background-size: 40px 35px;
   }
 
-  & p:first-child {
+  & p {
     margin: 0;
+  }
 
+  & p:first-child {
     color: $color-black;
   }
 
@@ -146,6 +185,37 @@
   }
 }
 
+.features__text-block {
+  border-bottom: 1px solid $color-silver;
+  padding-top: 27px;
+  padding-bottom: 28px;
+
+  & p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
+  & p:first-child {
+    margin-bottom: 10px;
+  }
+
+  & p:nth-child(2) {
+    margin-bottom: 15px;
+  }
+}
+
 .features__text-block > p > em {
   font-style: inherit;
+}
+
+.features__img > img {
+  min-height: 260px;
+  height: 50.07vw;
+  max-height: 384px;
+
+  font-family: "object-fit: cover; object-position: center;";
+
+  object-fit: cover;
+	object-position: center;
 }
