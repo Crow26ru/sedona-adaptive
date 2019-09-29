@@ -1,11 +1,16 @@
 .features {
   padding-top: 41px;
+
+  @include tablet {
+    padding-top: 51px;
+  }
 }
 
 .features__inner {
   & > p {
     margin: 0 auto;
     padding: 0 20px;
+    max-width: 640px;
 
     font-size: 14px;
     line-height: 26px;
@@ -26,6 +31,11 @@
     line-height: 23px;
     font-weight: 700;
     color: $color-black;
+
+    @include tablet {
+      font-size: 21px;
+      line-height: 22px;
+    }
   }
 
   @include only-mobile {
@@ -39,6 +49,13 @@
   @include list-reset;
 
   background-color: $color-light-brown;
+
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 
 .features__item {
@@ -50,6 +67,12 @@
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
+
+  @include tablet {
+    margin-left: 0;
+    margin-right: 0;
+    width: 33.33%;
+  }
 
   &:last-child .features__text-block {
     border-bottom: none;
@@ -95,12 +118,28 @@
     background-color: $color-light-blue;
 
     color: $color-white;
+
+    @include tablet {
+      @include flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: flex-start;
+      width: 100%;
+
+      &:nth-child(2) > .features__text-block {
+        order: 1;
+      }
+    }
   }
 
   &--big .features__text-block {
     border: none;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    @include tablet {
+      width: 33.33%;
+    }
   }
 }
 
@@ -114,6 +153,16 @@
   text-align: left;
   color: $color-dark-brown;
 
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+    text-align: center;
+  }
+
   & li {
     position: relative;
 
@@ -121,6 +170,13 @@
     padding-left: 70px;
     padding-right: 20px;
     max-width: 400px;
+
+    @include tablet {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 160px;
+      width: 33.33%;
+    }
   }
 
   & li::after {
@@ -148,6 +204,19 @@
 
     background: transparent url("../img/house-icon.svg") no-repeat 0 0;
     background-size: 39px 37px;
+
+    @include tablet {
+      width: 75px;
+      height: 72px;
+
+      background-size: 75px 72px;
+    }
+  }
+
+  & .features__gift {
+    @include tablet {
+      order: 1;
+    }
   }
 
   & .features__gift::after {
@@ -159,6 +228,13 @@
 
     background: transparent url("../img/gift-icon.svg") no-repeat 0 0;
     background-size: 32px 38px;
+
+    @include tablet {
+      width: 64px;
+      height: 75px;
+
+      background-size: 64px 75px;
+    }
   }
 
   & .features__eat::after {
@@ -170,6 +246,13 @@
 
     background: transparent url("../img/hamburger-icon.svg") no-repeat 0 0;
     background-size: 40px 35px;
+
+    @include tablet {
+      width: 77px;
+      height: 68px;
+
+      background-size: 77px 68px;
+    }
   }
 
   & p {
@@ -190,6 +273,10 @@
   padding-top: 27px;
   padding-bottom: 28px;
 
+  @include tablet {
+    border-bottom: none;
+  }
+
   & p {
     margin-left: auto;
     margin-right: auto;
@@ -209,13 +296,25 @@
   font-style: inherit;
 }
 
+.features__img {
+  width: 66.67%;
+}
+
 .features__img > img {
-  min-height: 260px;
-  height: 50.07vw;
-  max-height: 384px;
+  @include only-mobile {
+    min-height: 260px;
+    height: 50.07vw;
+    max-height: 384px;
+  }
 
   font-family: "object-fit: cover; object-position: center;";
 
   object-fit: cover;
-	object-position: center;
+  object-position: center;
+
+  @include tablet {
+    min-height: 256px;
+    height: 33.33vw;
+    max-height: 400px;
+  }
 }

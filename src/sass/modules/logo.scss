@@ -1,6 +1,5 @@
 .logo {
   position: absolute;
-  bottom: -26px;
   left: 50%;
   z-index: 1;
 
@@ -10,8 +9,16 @@
 
   transform: translate(-50%, 0);
 
+  @include only-mobile {
+    bottom: -26px;
+  }
+
   & img {
     width: 102px;
     height: 83px;
+  }
+
+  @include tablet {
+    top: 0;
   }
 }

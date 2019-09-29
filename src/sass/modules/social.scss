@@ -9,11 +9,14 @@
 }
 
 .social li {
-  margin-top: 6px;
   margin-right: 6px;
 
   &:nth-child(3n) {
     margin-right: 0;
+  }
+
+  &:nth-child(n + 4) {
+    margin-top: 6px;
   }
 }
 
