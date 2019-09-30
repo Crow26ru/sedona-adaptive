@@ -7,6 +7,11 @@
   text-align: center;
   text-transform: uppercase;
 
+  @include tablet {
+    padding-top: 49px;
+    padding-bottom: 58px;
+  }
+
   & p {
     margin: 0 auto;
     max-width: 400px;
@@ -14,14 +19,26 @@
     font-size: 14px;
     line-height: 24px;
     color: $color-dark-brown;
+
+    @include tablet {
+      max-width: 450px;
+    }
   }
 
   & p:first-of-type {
     margin-bottom: 18px;
+
+    @include tablet {
+      margin-bottom: 26px;
+    }
   }
 
   & p:nth-of-type(2) {
     margin-bottom: 35px;
+
+    @include tablet {
+      margin-bottom: 42px;
+    }
   }
 
   & p > em,
@@ -34,6 +51,11 @@
   & p > em {
     font-style: normal;
     color: $color-black;
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 
   & a,
@@ -53,6 +75,10 @@
     color: $color-white;
 
     background-color: $color-light-blue;
+
+    @include tablet {
+      width: 458px;
+    }
   }
 
   & a:hover,

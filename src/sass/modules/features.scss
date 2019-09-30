@@ -24,6 +24,10 @@
 
   & > p:last-of-type {
     margin-bottom: 5px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
   }
 
   & > p > strong {
@@ -86,6 +90,11 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+
+    @include tablet {
+      font-size: 21px;
+      line-height: 26px;
+    }
   }
 
   @include only-mobile {
@@ -138,6 +147,7 @@
     padding-bottom: 40px;
 
     @include tablet {
+      padding: 44px 20px;
       width: 33.33%;
     }
   }
@@ -158,6 +168,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
+    padding: 0;
     width: 100%;
 
     text-align: center;
@@ -174,7 +185,8 @@
     @include tablet {
       padding-left: 0;
       padding-right: 0;
-      padding-top: 160px;
+      padding-top: 158px;
+      padding-bottom: 33px;
       width: 33.33%;
     }
   }
@@ -185,14 +197,10 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
 
-  & p {
-    max-width: 400px;
-  }
-
-  & p:first-child {
-    margin-bottom: 15px;
+    @include tablet {
+      transform: translate(-50%, 0);
+    }
   }
 
   & .features__hotel::after {
@@ -206,6 +214,9 @@
     background-size: 39px 37px;
 
     @include tablet {
+      top: 60px;
+      left: 50%;
+
       width: 75px;
       height: 72px;
 
@@ -230,6 +241,9 @@
     background-size: 32px 38px;
 
     @include tablet {
+      top: 57px;
+      left: 50%;
+
       width: 64px;
       height: 75px;
 
@@ -248,6 +262,9 @@
     background-size: 40px 35px;
 
     @include tablet {
+      top: 63px;
+      left: 50%;
+
       width: 77px;
       height: 68px;
 
@@ -257,10 +274,24 @@
 
   & p {
     margin: 0;
+    max-width: 400px;
+
+    @include tablet {
+      margin-left: auto;
+      margin-right: auto;
+      width: 75%;
+      max-width: 300px;
+    }
   }
 
   & p:first-child {
+    margin-bottom: 15px;
+
     color: $color-black;
+
+    @include tablet {
+      margin-bottom: 21px;
+    }
   }
 
   & p:first-child > em {
@@ -274,21 +305,38 @@
   padding-bottom: 28px;
 
   @include tablet {
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-bottom: none;
+    padding: 44px 20px 45px;
   }
 
   & p {
     margin-left: auto;
     margin-right: auto;
     max-width: 400px;
+
+    @include tablet {
+      max-width: 165px;
+    }
   }
 
   & p:first-child {
     margin-bottom: 10px;
+
+    @include tablet {
+      max-width: 150px;
+    }
   }
 
   & p:nth-child(2) {
     margin-bottom: 15px;
+
+    @include tablet {
+      margin-bottom: 21px;
+    }
   }
 }
 
@@ -297,7 +345,11 @@
 }
 
 .features__img {
-  width: 66.67%;
+  width: 100%;
+
+  @include tablet {
+    width: 66.67%;
+  }
 }
 
 .features__img > img {
