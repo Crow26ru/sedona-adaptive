@@ -12,6 +12,10 @@
     padding-bottom: 58px;
   }
 
+  @include desktop {
+    padding-bottom: 66px;
+  }
+
   & p {
     margin: 0 auto;
     max-width: 400px;
@@ -38,6 +42,10 @@
 
     @include tablet {
       margin-bottom: 42px;
+    }
+
+    @include desktop {
+      margin-bottom: 47px;
     }
   }
 

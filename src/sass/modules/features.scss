@@ -150,6 +150,10 @@
       padding: 44px 20px;
       width: 33.33%;
     }
+
+    @include desktop {
+      padding: 51px 20px;
+    }
   }
 }
 
@@ -188,6 +192,10 @@
       padding-top: 158px;
       padding-bottom: 33px;
       width: 33.33%;
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
     }
   }
 
@@ -305,12 +313,12 @@
   padding-bottom: 28px;
 
   @include tablet {
-    @include flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     border-bottom: none;
     padding: 44px 20px 45px;
+  }
+
+  @include desktop {
+    padding: 44px 50px 66px;
   }
 
   & p {
@@ -320,6 +328,10 @@
 
     @include tablet {
       max-width: 165px;
+    }
+
+    @include desktop {
+      max-width: 100%;
     }
   }
 
@@ -365,8 +377,6 @@
   object-position: center;
 
   @include tablet {
-    min-height: 256px;
-    height: 33.33vw;
-    max-height: 400px;
+    height: 256px;
   }
 }
