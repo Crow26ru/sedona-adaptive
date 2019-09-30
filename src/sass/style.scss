@@ -1,1 +1,19 @@
-@import 'global/global';
+@import "global/variables";
+@import "global/mixins";
+@import "global/normalize";
+@import "global/fonts";
+@import "global/global";
+@import "global/visually-hidden";
+/* --- КОМПОНЕНТЫ --- */
+@import "modules/block";
+@import "modules/btn";
+@import "modules/nowrap";
+@import "modules/footer";
+@import "modules/navigation";
+@import "modules/logo";
+@import "modules/social";
+/* --- КРУПНЫЕ БЛОКИ ГЛАВНОЙ СТРАНИЦЫ --- */
+@import "modules/intro";
+@import "modules/features";
+@import "modules/find-hotel";
+@import "modules/map";

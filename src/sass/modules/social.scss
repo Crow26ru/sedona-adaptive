@@ -1,0 +1,75 @@
+.social {
+  @include list-reset;
+  @include flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.social li {
+  margin-right: 6px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(n + 4) {
+    margin-top: 6px;
+  }
+}
+
+.social a,
+.social a:hover,
+.social a:focus,
+.social a:active {
+  transition: color 0.4s, background-color 0.4s;
+}
+
+.social a {
+  position: relative;
+
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  color: $color-white;
+
+  background-color: $color-light-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $color-blue;
+  }
+
+  &:active {
+    background-color: $color-dark-blue;
+
+    color: $color-white-03;
+  }
+}
+
+.social__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  fill: currentColor;
+  transform: translate(-50%, -50%);
+
+  &--tw {
+    width: 18px;
+    height: 14px;
+  }
+
+  &--fb {
+    width: 9px;
+    height: 18px;
+  }
+
+  &--yt {
+    width: 20px;
+    height: 14px;
+  }
+}

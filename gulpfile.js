@@ -90,7 +90,10 @@ gulp.task('style', function () {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('src/js/*.js')
+  return gulp.src([
+    'src/js/libs/*.js',
+    'src/js/modules/*.js'
+   ])
   .pipe(plumber())
   .pipe(concat('script.js'))
   .pipe(gulp.dest('build/js'))

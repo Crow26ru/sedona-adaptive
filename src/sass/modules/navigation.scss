@@ -1,0 +1,139 @@
+.navigation {
+  position: relative;
+
+  @include only-mobile {
+    padding-bottom: 57px;
+  }
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-pt-sans;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+
+  list-style: none;
+
+  & a {
+    display: block;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  @include only-mobile {
+    & a {
+      border-top: 1px solid $color-border-light-blue;
+      border-bottom: 1px solid $color-border-dark-blue;
+      padding: 7px 0;
+
+      color: $color-white;
+
+      background-color: $color-light-blue;
+      transition: border 0.4s, color 0.4s, background-color 0.4s;
+    }
+
+    & a:hover,
+    & a:focus,
+    & li:last-child > a:hover,
+    & li:last-child > a:focus {
+      border-top-color: $color-light-blue;
+      border-bottom-color: $color-brown;
+
+      background-color: $color-blue;
+      transition: border 0.4s, color 0.4s, background-color 0.4s;
+    }
+
+    & a:active,
+    & li:last-child > a:active {
+      border-top-color: $color-border-blue;
+      border-bottom-color: $color-brown;
+
+      color: $color-white-03;
+
+      background-color: $color-dark-blue;
+      transition: border 0.4s, color 0.4s, background-color 0.4s;
+    }
+
+    & li:first-child > a {
+      border-top: none;
+    }
+
+    & li:last-child > a {
+      border-bottom: none;
+
+      background: $color-light-blue url("../img/mobile-menu-gradient@1x.png") repeat-x left bottom;
+      background-size: 1px 7px;
+
+      @include retina {
+        background-image: url("../img/mobile-menu-gradient@2x.png");
+      }
+    }
+  }
+
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    font-size: 14px;
+    line-height: 26px;
+
+    & > li {
+      width: calc((100% - 156px) / 4);
+    }
+
+    & > li:nth-child(4n + 3) {
+      margin-left: 156px;
+    }
+
+    & a,
+    & a:hover,
+    & a:focus,
+    & a:active {
+      transition: color 0.4s;
+    }
+
+    & a {
+      padding: 15px 0;
+
+      color: $color-black;
+    }
+
+    & a:hover,
+    & a:focus {
+      color: $color-light-blue;
+    }
+
+    & a:active {
+      color: $color-black-03;
+    }
+
+    & a:not([href]) {
+      color: $color-gray;
+    }
+
+    & a:hover:not([href]) {
+      color: $color-dark-gray;
+    }
+
+    & a:active:not([href]) {
+      color: $color-gray-03;
+    }
+  }
+
+  @include desktop {
+    & > li {
+      width: calc((100% - 244px) / 4);
+    }
+
+    & > li:nth-child(4n + 3) {
+      margin-left: 244px;
+    }
+  }
+}

@@ -1,0 +1,382 @@
+.features {
+  padding-top: 41px;
+
+  @include tablet {
+    padding-top: 51px;
+  }
+}
+
+.features__inner {
+  & > p {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 640px;
+
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  & > p:first-of-type {
+    margin-bottom: 26px;
+  }
+
+  & > p:last-of-type {
+    margin-bottom: 5px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  & > p > strong {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+    color: $color-black;
+
+    @include tablet {
+      font-size: 21px;
+      line-height: 22px;
+    }
+  }
+
+  @include only-mobile {
+    & > p {
+      max-width: 450px;
+    }
+  }
+}
+
+.features__list {
+  @include list-reset;
+
+  background-color: $color-light-brown;
+
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.features__item {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-left: 0;
+    margin-right: 0;
+    width: 33.33%;
+  }
+
+  &:last-child .features__text-block {
+    border-bottom: none;
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  & p:first-child {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+
+    @include tablet {
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+
+  @include only-mobile {
+    &:first-child {
+      position: relative;
+
+      padding-top: 36px;
+    }
+
+    &:first-child::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      max-width: 100%;
+      height: 37px;
+
+      background: transparent url("../img/triangle-xl.svg") no-repeat center top;
+      background-size: 766px 37px;
+    }
+  }
+
+  &--big {
+    margin-left: 0;
+    margin-right: 0;
+
+    background-color: $color-light-blue;
+
+    color: $color-white;
+
+    @include tablet {
+      @include flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: flex-start;
+      width: 100%;
+
+      &:nth-child(2) > .features__text-block {
+        order: 1;
+      }
+    }
+  }
+
+  &--big .features__text-block {
+    border: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include tablet {
+      padding: 44px 20px;
+      width: 33.33%;
+    }
+
+    @include desktop {
+      padding: 51px 20px;
+    }
+  }
+}
+
+.features__sublist {
+  @include list-reset;
+  padding-top: 35px;
+  padding-bottom: 9px;
+
+  background-color: $color-white;
+
+  text-align: left;
+  color: $color-dark-brown;
+
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    width: 100%;
+
+    text-align: center;
+  }
+
+  & li {
+    position: relative;
+
+    margin: 0 auto 29px;
+    padding-left: 70px;
+    padding-right: 20px;
+    max-width: 400px;
+
+    @include tablet {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 158px;
+      padding-bottom: 33px;
+      width: 33.33%;
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  & li::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include tablet {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  & .features__hotel::after {
+    top: -9px;
+    left: 21px;
+
+    width: 39px;
+    height: 37px;
+
+    background: transparent url("../img/house-icon.svg") no-repeat 0 0;
+    background-size: 39px 37px;
+
+    @include tablet {
+      top: 60px;
+      left: 50%;
+
+      width: 75px;
+      height: 72px;
+
+      background-size: 75px 72px;
+    }
+  }
+
+  & .features__gift {
+    @include tablet {
+      order: 1;
+    }
+  }
+
+  & .features__gift::after {
+    top: -11px;
+    left: 25px;
+
+    width: 32px;
+    height: 40px;
+
+    background: transparent url("../img/gift-icon.svg") no-repeat 0 0;
+    background-size: 32px 40px;
+
+    @include tablet {
+      top: 57px;
+      left: 50%;
+
+      width: 64px;
+      height: 75px;
+
+      background-size: 64px 75px;
+    }
+  }
+
+  & .features__eat::after {
+    top: -5px;
+    left: 18px;
+
+    width: 40px;
+    height: 35px;
+
+    background: transparent url("../img/hamburger-icon.svg") no-repeat 0 0;
+    background-size: 40px 35px;
+
+    @include tablet {
+      top: 63px;
+      left: 50%;
+
+      width: 77px;
+      height: 68px;
+
+      background-size: 77px 68px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    max-width: 400px;
+
+    @include tablet {
+      margin-left: auto;
+      margin-right: auto;
+      width: 75%;
+      max-width: 300px;
+    }
+  }
+
+  & p:first-child {
+    margin-bottom: 15px;
+
+    color: $color-black;
+
+    @include tablet {
+      margin-bottom: 21px;
+    }
+  }
+
+  & p:first-child > em {
+    font-style: inherit;
+  }
+}
+
+.features__text-block {
+  border-bottom: 1px solid $color-silver;
+  padding-top: 27px;
+  padding-bottom: 28px;
+
+  @include tablet {
+    border-bottom: none;
+    padding: 44px 20px 45px;
+  }
+
+  @include desktop {
+    padding: 44px 50px 66px;
+  }
+
+  & p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+
+    @include tablet {
+      max-width: 165px;
+    }
+
+    @include desktop {
+      max-width: 100%;
+    }
+  }
+
+  & p:first-child {
+    margin-bottom: 10px;
+
+    @include tablet {
+      max-width: 150px;
+    }
+  }
+
+  & p:nth-child(2) {
+    margin-bottom: 15px;
+
+    @include tablet {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.features__text-block > p > em {
+  font-style: inherit;
+}
+
+.features__img {
+  width: 100%;
+
+  @include tablet {
+    width: 66.67%;
+  }
+}
+
+.features__img > img {
+  @include only-mobile {
+    min-height: 260px;
+    height: 50.07vw;
+    max-height: 384px;
+  }
+
+  font-family: "object-fit: cover; object-position: center;", sans-serif;
+
+  object-fit: cover;
+  object-position: center;
+
+  @include tablet {
+    height: 256px;
+  }
+}

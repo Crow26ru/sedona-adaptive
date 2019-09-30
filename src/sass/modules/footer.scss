@@ -1,0 +1,95 @@
+.footer {
+  padding-top: 36px;
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding-bottom: 36px;
+  }
+}
+
+.footer > .block__inner {
+  @include tablet {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include desktop {
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+}
+
+.footer__top,
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__top {
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.footer__mid {
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.footer__top p {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+.footer__bottom a,
+.footer__bottom a:hover,
+.footer__bottom a:focus,
+.footer__bottom a:active {
+  transition: color 0.4s;
+}
+
+.footer__bottom a {
+  @include flex;
+  align-content: flex-start;
+  justify-content: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    color: $color-light-blue;
+  }
+
+  &:active {
+    color: $color-black-03;
+  }
+}
+
+.footer__bottom span {
+  margin-top: 3px;
+  margin-right: 12px;
+
+  font-size: 14px;
+  line-height: 26px;
+  color: $color-black;
+}
+
+.footer__bottom svg {
+  fill: currentColor;
+}

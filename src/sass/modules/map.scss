@@ -1,0 +1,29 @@
+.map__img {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    width: 27px;
+    height: 27px;
+
+    background: transparent url("../img/map-pin.svg") no-repeat 0 0;
+    background-size: 27px 27px;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.map__img > img {
+  height: 350px;
+
+  font-family: "object-fit: cover; object-position: center;", sans-serif;
+
+  object-fit: cover;
+  object-position: center;
+}
