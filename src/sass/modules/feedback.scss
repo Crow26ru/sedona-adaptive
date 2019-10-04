@@ -1,5 +1,5 @@
-.feedback legend {
-  margin: 0 auto;
+.feedback h2 {
+  margin: 0 0 22px;
 
   font-size: 18px;
   line-height: 26px;
@@ -7,6 +7,44 @@
   text-align: center;
   text-transform: uppercase;
   color: $color-black;
+
+  @include tablet {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+      content: "";
+
+      flex-shrink: 1;
+      display: block;
+      height: 1px;
+      width: 100%;
+
+      background-color: $color-sublight-brown;
+    }
+
+    &::before {
+      margin-right: 55px;
+    }
+
+    &::after {
+      margin-left: 55px;
+    }
+
+    & > span {
+      flex-shrink: 0;
+      max-width: 285px;
+    }
+  }
+}
+
+.feedback__form {
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+  }
 }
 
 .feedback__intro,
@@ -18,7 +56,8 @@
 }
 
 .feedback__intro {
-  margin-top: 30px;
+  margin-top: 27px;
+  margin-bottom: 0;
 
   line-height: 24px;
   text-align: center;
@@ -29,7 +68,7 @@
 
   &--offseted {
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     width: calc(100% - 20px);
   }
 }
@@ -48,6 +87,7 @@
   }
 
   &--custom {
+    margin-bottom: 13px;
     min-height: 56px;
   }
 }
@@ -135,7 +175,7 @@
   border: none;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 15px;
+  padding-left: 23px;
   padding-right: 0;
   width: 1px;
   height: 58px;
@@ -186,28 +226,115 @@
   margin: 0;
   border: none;
   border-bottom: 1px solid $color-silver;
-  padding: 50px 20px 25px;
-
-  & > legend {
-    transform: translate(0, 20px);
-  }
+  padding: 17px 20px 25px;
+  width: 100%;
 
   &--contact > .feedback__input-container {
     margin-bottom: 15px;
   }
 
-  &:first-of-type {
-    padding-top: 40px;
-    padding-bottom: 20px;
+  &--contact > .feedback__input-container:last-of-type {
+    margin-bottom: 0;
   }
 
-  &:first-of-type > legend {
-    transform: translate(0, 40px);
+  &--places > .feedback__input-container {
+    margin-bottom: 24px;
+  }
+
+  &--places > .feedback__input-container:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:first-of-type {
+    padding-top: 37px;
+    padding-bottom: 17px;
+  }
+
+  &:first-of-type h2::before,
+  &:first-of-type h2::after {
+    content: none;
   }
 
   &:last-of-type {
-    margin-bottom: 51px;
+    margin-bottom: 26px;
     border-bottom: none;
+  }
+
+  @include tablet {
+    border-bottom: none;
+
+    &--mark,
+    &--user {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      width: 50%;
+    }
+
+    &--mark {
+      position: relative;
+    }
+
+    &--mark::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: $color-sublight-brown;
+    }
+
+    &--mark h2,
+    &--user h2 {
+      margin-bottom: 40px;
+    }
+
+    &--mark h2::before,
+    &--mark h2::after,
+    &--user h2::before,
+    &--user h2::after {
+      content: none;
+    }
+
+    &--user {
+      order: 1;
+    }
+
+    &--contact {
+      order: 2;
+    }
+
+    &--places {
+      @include flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      order: 3;
+    }
+
+    &--places h2 {
+      width: 100%;
+    }
+
+    &--places .feedback__input-container {
+      width: 210px;
+    }
+
+    &--places .feedback__input-container:nth-of-type(odd) {
+      margin-left: calc((100% - 470px) / 2);
+      margin-right: 50px;
+    }
+
+    &--places .feedback__input-container:nth-of-type(even) {
+      margin-right: calc((100% - 470px) / 2);
+    }
+
+    &--emoution {
+      order:  4;
+    }
   }
 }
 
@@ -230,7 +357,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -17px;
+    top: -13px;
     left: 0;
     z-index: 1;
 
@@ -275,7 +402,7 @@
 }
 
 .feedback__hidden-input:checked + .feedback__custom-input--radio::after {
-  top: 0;
+  top: 4px;
   left: 17px;
 
   border-radius: 50%;
@@ -286,8 +413,8 @@
 }
 
 .feedback__hidden-input:checked + .feedback__custom-input--checkbox::after {
-  top: 5px;
-  left: 16px;
+  top: 7px;
+  left: 17px;
 
   width: 24px;
   height: 16px;
@@ -296,17 +423,26 @@
   background-size: 24px 16px;
 }
 
-.feedback__hidden-input + .feedback__custom-input--checkbox::before,
+.feedback__hidden-input + .feedback__custom-input::before,
 .feedback__hidden-input:focus + .feedback__custom-input--checkbox::before {
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, box-shadow 0.4s;
 }
+
 .feedback__hidden-input:focus + .feedback__custom-input--checkbox::before {
   background-color: $color-sublight-brown;
 }
 
+.feedback__hidden-input:focus + .feedback__custom-input--radio::before {
+  background-color: $color-white;
+}
+
+.feedback__hidden-input:focus:checked + .feedback__custom-input--radio::before {
+  box-shadow: inset 0 0 0 4px $color-sublight-brown;
+}
+
 .feedback__textarea {
   border: none;
-  padding: 20px;
+  padding: 15px 20px;
   width: 100%;
   min-height: 160px;
 
@@ -344,16 +480,17 @@
 
 .feedback__btn-submit {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 36px;
   border: none;
   padding: 16px 0;
-  width: calc(100% - 40px);
+  width: 100%;
   max-width: 400px;
 
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
   color: $color-white;
 
   background-color: $color-light-blue;
@@ -370,5 +507,43 @@
     color: $color-white-03;
 
     background-color: $color-dark-blue;
+  }
+
+  @include tablet {
+    margin: 0;
+    width: 42.18vw;
+    max-width: 450px;
+  }
+}
+
+.feedback__submit-container {
+  margin: 0 20px;
+
+  @include tablet {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+    order: 5;
+    width: calc(100% - 40px);
+  }
+}
+
+.feedback__submit-container p {
+  display: none;
+  margin: 0 auto;
+  max-width: 450px;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-dark-brown;
+
+  @include tablet {
+    display: block;
+    margin: 0;
+    width: 21.48vw;
+    max-width: 450px;
   }
 }

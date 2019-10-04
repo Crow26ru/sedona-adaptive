@@ -40,12 +40,14 @@
       </div>
       <div class="feedback">
         <form class="feedback__form" action="#" method="post">
-          <fieldset class="feedback__part">
-            <legend>Оставьте свой отзыв</legend>
-            <p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных Вами достопримечательностях</p>
+          <fieldset class="feedback__part feedback__part--intro">
+            <h2><span>Оставьте свой отзыв</span></h2>
+            <p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также&nbsp;о посещенных Вами достопримечательностях</p>
           </fieldset>
-          <fieldset class="feedback__part">
-            <legend>Представьтесь:</legend>
+          <fieldset class="feedback__part feedback__part--user">
+            <div class="feedback__title">
+              <h2><span>Представьтесь:</span></h2>
+            </div>
             <div class="feedback__input-container">
               <label class="feedback__label" for="first-name">Имя*:</label>
               <input type="text" class="feedback__input-text feedback__input-text--short" id="first-name" name="first-name" placeholder="Петр" required>
@@ -60,7 +62,7 @@
             </div>
           </fieldset>
           <fieldset class="feedback__part feedback__part--contact">
-            <legend>Контактная информация:</legend>
+            <h2><span>Контактная информация:</span></h2>
             <div class="feedback__input-container">
               <label class="feedback__label feedback__label--offseted" for="phone">Контактный телефон*:</label>
               <input type="tel" class="feedback__input-text" id="phone" name="phone" placeholder="Введите телефон" required>
@@ -80,8 +82,8 @@
               </button>
             </div>
           </fieldset>
-          <fieldset class="feedback__part">
-            <legend>Ваше общее впечатление:</legend>
+          <fieldset class="feedback__part feedback__part--mark">
+            <h2><span>Ваше общее впечатление:</span></h2>
             <div class="feedback__input-container feedback__input-container--custom">
               <input type="radio" class="visually-hidden feedback__hidden-input" id="mark-positive" name="mark" value="positive" checked>
               <label class="feedback__label feedback__custom-input feedback__custom-input--radio" for="mark-positive">Скорее положительное</label>
@@ -95,8 +97,8 @@
               <label class="feedback__label feedback__custom-input feedback__custom-input--radio" for="mark-undefined">Затрудняюсь ответить</label>
             </div>
           </fieldset>
-          <fieldset class="feedback__part">
-            <legend>Посещенные достопримечательности:</legend>
+          <fieldset class="feedback__part feedback__part--places">
+            <h2><span>Посещенные достопримечательности:</span></h2>
             <div class="feedback__input-container feedback__input-container--custom">
               <input type="checkbox" class="visually-hidden feedback__hidden-input" id="devil-bridge" name="devil-bridge" checked>
               <label class="feedback__label feedback__custom-input feedback__custom-input--checkbox" for="devil-bridge">Мост Дьявола</label>
@@ -114,11 +116,14 @@
               <label class="feedback__label feedback__custom-input feedback__custom-input--checkbox" for="red-rocks">Красные скалы</label>
             </div>
           </fieldset>
-          <fieldset class="feedback__part">
-            <legend>Опишите свои эмоции:</legend>
+          <fieldset class="feedback__part feedback__part--emoution">
+            <h2><span>Опишите свои эмоции:</span></h2>
             <textarea  class="feedback__textarea" name="emoution" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
-          <button class="feedback__btn-submit" type="submit">Отправить отзыв</button>
+          <div class="feedback__submit-container">
+            <button class="feedback__btn-submit" type="submit">Отправить отзыв</button>
+            <p>*&nbsp;&mdash;&nbsp;обязательные&nbsp;поля</p>
+          </div>
         </form>
       </div>
     </main>
