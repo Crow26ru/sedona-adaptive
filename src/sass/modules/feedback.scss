@@ -123,6 +123,10 @@
     color: $color-dark-brown;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:active {
     color: $color-btn-active;
   }
@@ -501,6 +505,10 @@
   &:hover,
   &:focus {
     background-color: $color-blue;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:active {
