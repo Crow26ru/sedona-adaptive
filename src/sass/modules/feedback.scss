@@ -1,3 +1,8 @@
+.feedback {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .feedback h2 {
   margin: 0 0 22px;
 
@@ -61,6 +66,10 @@
 
   line-height: 24px;
   text-align: center;
+}
+
+.feedback__list-ctrls {
+  @include list-reset;
 }
 
 .feedback__label {
@@ -266,6 +275,8 @@
 
   @include tablet {
     border-bottom: none;
+    padding-left: 60px;
+    padding-right: 60px;
 
     &--mark,
     &--user {
@@ -312,10 +323,6 @@
     }
 
     &--places {
-      @include flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: center;
       order: 3;
     }
 
@@ -323,17 +330,18 @@
       width: 100%;
     }
 
+    &--places .feedback__list-ctrls {
+      @include flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      width: 470px;
+    }
+
     &--places .feedback__input-container {
       width: 210px;
-    }
-
-    &--places .feedback__input-container:nth-of-type(odd) {
-      margin-left: calc((100% - 470px) / 2);
-      margin-right: 50px;
-    }
-
-    &--places .feedback__input-container:nth-of-type(even) {
-      margin-right: calc((100% - 470px) / 2);
     }
 
     &--emoution {
@@ -525,14 +533,16 @@
 }
 
 .feedback__submit-container {
-  margin: 0 20px;
+  padding: 0 20px;
 
   @include tablet {
     @include flex;
     align-items: center;
     justify-content: space-between;
     order: 5;
-    width: calc(100% - 40px);
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
   }
 }
 
@@ -551,7 +561,5 @@
   @include tablet {
     display: block;
     margin: 0;
-    width: 21.48vw;
-    max-width: 450px;
   }
 }
