@@ -85,6 +85,7 @@
     line-height: 26px;
 
     & > li {
+      flex-shrink: 1;
       width: calc((100% - 156px) / 4);
     }
 

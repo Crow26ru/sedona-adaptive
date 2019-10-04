@@ -32,7 +32,95 @@
       </div>
     </header>
     <main class="block">
-
+      <h1 class="visually-hidden">Ваш отзыв о Седоне</h1>
+      <div class="intro">
+        <div class="block__inner intro__inner intro__inner--minimize">
+          <img class="intro__img intro__img--text" src="img/sedona-text.svg" width="229" height="39" alt="Добро пожаловать в Седону">
+        </div>
+      </div>
+      <div class="feedback">
+        <form class="feedback__form" action="#" method="post">
+          <fieldset class="feedback__part">
+            <legend>Оставьте свой отзыв</legend>
+            <p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных Вами достопримечательностях</p>
+          </fieldset>
+          <fieldset class="feedback__part">
+            <legend>Представьтесь:</legend>
+            <div class="feedback__input-container">
+              <label class="feedback__label" for="first-name">Имя*:</label>
+              <input type="text" class="feedback__input-text feedback__input-text--short" id="first-name" name="first-name" placeholder="Петр" required>
+            </div>
+            <div class="feedback__input-container">
+              <label class="feedback__label" for="last-name">Фамилия*:</label>
+              <input type="text" class="feedback__input-text feedback__input-text--short" id="last-name" name="last-name" placeholder="Иванов" required>
+            </div>
+            <div class="feedback__input-container">
+              <label class="feedback__label" for="father-name">Отчество:</label>
+              <input type="text" class="feedback__input-text feedback__input-text--short" id="father-name" name="father-name" placeholder="Александрович">
+            </div>
+          </fieldset>
+          <fieldset class="feedback__part feedback__part--contact">
+            <legend>Контактная информация:</legend>
+            <div class="feedback__input-container">
+              <label class="feedback__label feedback__label--offseted" for="phone">Контактный телефон*:</label>
+              <input type="tel" class="feedback__input-text" id="phone" name="phone" placeholder="Введите телефон" required>
+              <button class="feedback__btn feedback__btn--phone" type="button" aria-label="Что-то сделать с номером телефона">
+                <svg width="18" height="18">
+                  <use xlink:href="img/sprite.svg#phone-icon"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="feedback__input-container">
+              <label class="feedback__label feedback__label--offseted" for="email">Электронная почта*:</label>
+              <input type="email" class="feedback__input-text" id="email" name="email" placeholder="Введите e-mail" required>
+              <button class="feedback__btn feedback__btn--email" type="button" aria-label="Что-то сделать с номером электронной почтой">
+                <svg width="16" height="12">
+                  <use xlink:href="img/sprite.svg#mail-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </fieldset>
+          <fieldset class="feedback__part">
+            <legend>Ваше общее впечатление:</legend>
+            <div class="feedback__input-container feedback__input-container--custom">
+              <input type="radio" class="visually-hidden feedback__hidden-input" id="mark-positive" name="mark" value="positive" checked>
+              <label class="feedback__label feedback__custom-input feedback__custom-input--radio" for="mark-positive">Скорее положительное</label>
+            </div>
+            <div class="feedback__input-container feedback__input-container--custom">
+              <input type="radio" class="visually-hidden feedback__hidden-input" id="mark-negative" name="mark" value="negative">
+              <label class="feedback__label feedback__custom-input feedback__custom-input--radio" for="mark-negative">Скорее отрицательное</label>
+            </div>
+            <div class="feedback__input-container feedback__input-container--custom">
+              <input type="radio" class="visually-hidden feedback__hidden-input" id="mark-undefined" name="mark" value="undefined">
+              <label class="feedback__label feedback__custom-input feedback__custom-input--radio" for="mark-undefined">Затрудняюсь ответить</label>
+            </div>
+          </fieldset>
+          <fieldset class="feedback__part">
+            <legend>Посещенные достопримечательности:</legend>
+            <div class="feedback__input-container feedback__input-container--custom">
+              <input type="checkbox" class="visually-hidden feedback__hidden-input" id="devil-bridge" name="devil-bridge" checked>
+              <label class="feedback__label feedback__custom-input feedback__custom-input--checkbox" for="devil-bridge">Мост Дьявола</label>
+            </div>
+            <div class="feedback__input-container feedback__input-container--custom">
+              <input type="checkbox" class="visually-hidden feedback__hidden-input" id="bell-mountain" name="bell-mountain" checked>
+              <label class="feedback__label feedback__custom-input feedback__custom-input--checkbox" for="bell-mountain">Гора-Колокол</label>
+            </div>
+            <div class="feedback__input-container feedback__input-container--custom">
+              <input type="checkbox" class="visually-hidden feedback__hidden-input" id="slide-park" name="slide-park" checked>
+              <label class="feedback__label feedback__custom-input feedback__custom-input--checkbox" for="slide-park">Слайд-парк</label>
+            </div>
+            <div class="feedback__input-container feedback__input-container--custom">
+              <input type="checkbox" class="visually-hidden feedback__hidden-input" id="red-rocks" name="red-rocks">
+              <label class="feedback__label feedback__custom-input feedback__custom-input--checkbox" for="red-rocks">Красные скалы</label>
+            </div>
+          </fieldset>
+          <fieldset class="feedback__part">
+            <legend>Опишите свои эмоции:</legend>
+            <textarea  class="feedback__textarea" name="emoution" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <button class="feedback__btn-submit" type="submit">Отправить отзыв</button>
+        </form>
+      </div>
     </main>
     <footer class="footer block">
       <div class="block__inner">
@@ -74,6 +162,16 @@
         </div>
       </div>
     </footer>
+  </div>
+  <div class="popup popup--failure">
+    <p class="popup__title"><strong>Что-то пошло не так!</strong></p>
+    <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить</p>
+    <button class="popup__btn" type="button">Ок</button>
+  </div>
+  <div class="popup popup--success">
+    <p class="popup__title"><strong>Ваш отзыв отправлен!</strong></p>
+    <p class="popup__text">Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;опубликуем его на&nbsp;сайте.</p>
+    <button class="popup__btn" type="button">Закрыть окно</button>
   </div>
   <script src="js/script.min.js"></script>
 </body>

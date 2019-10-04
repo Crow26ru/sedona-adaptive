@@ -37,6 +37,13 @@
       background-image: url("../img/intro-bg-desktop@2x.jpg");
     }
   }
+
+  &--minimize {
+    padding-top: 50px;
+    height: 158px;
+
+    background-position: bottom center;
+  }
 }
 
 .intro__img {
@@ -48,5 +55,10 @@
   @include tablet {
     width: 460px;
     height: 350px;
+  }
+
+  &--text {
+    width: 229px;
+    height: 39px;
   }
 }
