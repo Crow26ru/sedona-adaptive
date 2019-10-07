@@ -18,6 +18,8 @@
     align-items: center;
     justify-content: center;
 
+    font-size: 21px;
+
     &::before,
     &::after {
       content: "";
@@ -278,6 +280,27 @@
     padding-left: 60px;
     padding-right: 60px;
 
+    &:first-of-type {
+      padding-top: 68px;
+      padding-bottom: 73px;
+    }
+
+    &--intro h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &--intro p,
+    &--intro h2 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 450px;
+    }
+
+    &--intro h2 > span {
+      max-width: 100%;
+    }
+
     &--mark,
     &--user {
       padding-top: 0;
@@ -288,6 +311,8 @@
 
     &--mark {
       position: relative;
+
+      padding-right: 0;
     }
 
     &--mark::after {
@@ -302,9 +327,14 @@
       background-color: $color-sublight-brown;
     }
 
+    &--mark .feedback__input-container--custom:not(:last-child) {
+      margin-bottom: 22px;
+    }
+
     &--mark h2,
     &--user h2 {
-      margin-bottom: 40px;
+      justify-content: flex-start;
+      margin-bottom: 58px;
     }
 
     &--mark h2::before,
@@ -320,13 +350,25 @@
 
     &--contact {
       order: 2;
+      padding-top: 69px;
+      padding-bottom: 36px;
+    }
+
+    &--contact > .feedback__input-container {
+      margin-bottom: 24px;
+    }
+
+    &--contact h2 {
+      margin-bottom: 25px;
     }
 
     &--places {
+      padding-bottom: 52px;
       order: 3;
     }
 
     &--places h2 {
+      margin-bottom: 41px;
       width: 100%;
     }
 
@@ -335,17 +377,47 @@
       flex-wrap: wrap;
       align-items: flex-start;
       justify-content: space-between;
-      margin-left: auto;
-      margin-right: auto;
       width: 470px;
     }
 
     &--places .feedback__input-container {
+      margin-bottom: 32px;
       width: 210px;
     }
 
     &--emoution {
       order:  4;
+    }
+
+    &--emoution h2 {
+      margin-bottom: 58px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 33px;
+    }
+  }
+
+  @include only-tablet {
+    &--places .feedback__list-ctrls {
+      margin-left: auto;
+      margin-right: auto;
+      width: 470px;
+    }
+
+    &--places .feedback__input-container:nth-last-child(2),
+    &--places .feedback__input-container:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    &--places .feedback__list-ctrls {
+      width: 100%;
+    }
+
+    &--places .feedback__input-container:not(:nth-child(n + 5)) {
+      margin-bottom: 0;
     }
   }
 }
@@ -528,7 +600,7 @@
   @include tablet {
     margin: 0;
     width: 42.18vw;
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 
@@ -540,6 +612,7 @@
     align-items: center;
     justify-content: space-between;
     order: 5;
+    margin-bottom: 60px;
     padding-left: 60px;
     padding-right: 60px;
     width: 100%;

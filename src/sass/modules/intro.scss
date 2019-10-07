@@ -43,6 +43,11 @@
     height: 158px;
 
     background-position: bottom center;
+
+    @include tablet {
+      padding-top: 96px;
+      height: 290px;
+    }
   }
 }
 
@@ -60,5 +65,10 @@
   &--text {
     width: 229px;
     height: 39px;
+
+    @include tablet {
+      width: 458px;
+      height: 78px;
+    }
   }
 }
