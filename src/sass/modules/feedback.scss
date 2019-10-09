@@ -198,7 +198,7 @@
 .feedback__input-text:hover,
 .feedback__input-text:focus,
 .feedback__input-text:active {
-  transition: background-color 0.4s
+  transition: background-color 0.4s;
 }
 
 .feedback__input-text {
@@ -408,7 +408,7 @@
     }
 
     &--emoution {
-      order:  4;
+      order: 4;
     }
 
     &--emoution h2 {
