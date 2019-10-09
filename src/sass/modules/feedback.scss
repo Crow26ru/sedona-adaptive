@@ -82,6 +82,18 @@
     margin-bottom: 6px;
     width: calc(100% - 20px);
   }
+
+  @include desktop {
+    &--offseted {
+      margin-bottom: 0;
+      margin-left: 0;
+      width: auto;
+    }
+
+    &--offseted span {
+      display: none;
+    }
+  }
 }
 
 .feedback__input-container {
@@ -100,6 +112,10 @@
   &--custom {
     margin-bottom: 13px;
     min-height: 56px;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
   }
 }
 
@@ -235,6 +251,12 @@
   &--short {
     margin-left: 12px;
   }
+
+  @include desktop {
+    flex-grow: 0;
+    margin-left: 17px;
+    width: 315px;
+  }
 }
 
 .feedback__part {
@@ -244,11 +266,11 @@
   padding: 17px 20px 25px;
   width: 100%;
 
-  &--contact > .feedback__input-container {
+  &--contact .feedback__input-container {
     margin-bottom: 15px;
   }
 
-  &--contact > .feedback__input-container:last-of-type {
+  &--contact .feedback__input-container:last-of-type {
     margin-bottom: 0;
   }
 
@@ -354,7 +376,7 @@
       padding-bottom: 36px;
     }
 
-    &--contact > .feedback__input-container {
+    &--contact .feedback__input-container {
       margin-bottom: 24px;
     }
 
@@ -412,6 +434,47 @@
   }
 
   @include desktop {
+    padding-left: 120px;
+    padding-right: 120px;
+
+    &:first-of-type {
+      padding-top: 105px;
+      padding-bottom: 58px;
+    }
+
+    &--mark {
+      padding-right: 60px;
+    }
+
+    &--mark h2 {
+      justify-content: center;
+    }
+
+    &--user {
+      padding-left: 74px;
+    }
+
+    &--user input {
+      flex-grow: 1;
+    }
+
+    &--contact {
+      padding-top: 67px;
+      padding-bottom: 35px;
+    }
+
+    &--contact h2 {
+      margin-bottom: 75px;
+    }
+
+    &--contact .feedback__input-container {
+      margin-bottom: 0;
+    }
+
+    &--places {
+      padding-bottom: 50px;
+    }
+
     &--places .feedback__list-ctrls {
       width: 100%;
     }
@@ -617,6 +680,12 @@
     padding-right: 60px;
     width: 100%;
   }
+
+  @include desktop {
+    margin-bottom: 66px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .feedback__submit-container p {
@@ -634,5 +703,13 @@
   @include tablet {
     display: block;
     margin: 0;
+  }
+}
+
+@include desktop {
+  .feedback__part-wrapper {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

@@ -48,6 +48,11 @@
       padding-top: 96px;
       height: 290px;
     }
+
+    @include desktop {
+      padding-top: 101px;
+      height: 301px;
+    }
   }
 }
 
@@ -69,6 +74,11 @@
     @include tablet {
       width: 458px;
       height: 78px;
+    }
+
+    @include desktop {
+      width: 461px;
+      height: 79px;
     }
   }
 }
