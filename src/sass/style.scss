@@ -5,6 +5,7 @@
 @import "global/global";
 @import "global/visually-hidden";
 /* --- КОМПОНЕНТЫ --- */
+@import "modules/modal-mode";
 @import "modules/block";
 @import "modules/btn";
 @import "modules/nowrap";
@@ -12,8 +13,11 @@
 @import "modules/navigation";
 @import "modules/logo";
 @import "modules/social";
+@import "modules/popup";
 /* --- КРУПНЫЕ БЛОКИ ГЛАВНОЙ СТРАНИЦЫ --- */
 @import "modules/intro";
 @import "modules/features";
 @import "modules/find-hotel";
 @import "modules/map";
+/* --- СТРАНИЦЫ ОТЗЫВА --- */
+@import "modules/feedback";

@@ -85,11 +85,12 @@
     line-height: 26px;
 
     & > li {
-      width: calc((100% - 156px) / 4);
+      flex-shrink: 1;
+      width: 19.92%;
     }
 
     & > li:nth-child(4n + 3) {
-      margin-left: 156px;
+      margin-left: auto;
     }
 
     & a,
@@ -124,16 +125,6 @@
 
     & a:active:not([href]) {
       color: $color-gray-03;
-    }
-  }
-
-  @include desktop {
-    & > li {
-      width: calc((100% - 244px) / 4);
-    }
-
-    & > li:nth-child(4n + 3) {
-      margin-left: 244px;
     }
   }
 }
